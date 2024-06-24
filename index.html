@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>إدارة المهام والدراسة</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>إدارة المهام والدراسة</h1>
+    </header>
+    <main>
+        <section class="task-form">
+            <h2>إضافة مهمة جديدة</h2>
+            <form id="task-form">
+                <input type="text" id="task-title" placeholder="عنوان المهمة" required>
+                <input type="datetime-local" id="task-deadline" required>
+                <textarea id="task-details" placeholder="تفاصيل المهمة" required></textarea>
+                <button type="submit">إضافة المهمة</button>
+            </form>
+        </section>
+        <section class="task-list">
+            <h2>المهام</h2>
+            <ul id="task-list"></ul>
+        </section>
+    </main>
+    <div id="alert" class="alert hidden">
+        <p>🛎️</p>
+        <p>المهمة انتهت!</p>
+        <div id="extend-options" class="hidden">
+            <button class="extend-time-btn" data-hours="1">تمديد ساعة</button>
+            <button class="extend-time-btn" data-hours="2">تمديد ساعتين</button>
+            <button class="extend-time-btn" data-hours="3">تمديد 3 ساعات</button>
+        </div>
+        <button id="extend-btn">تمديد فترة المهام</button>
+        <button id="complete-btn">أكملت المهمة</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
